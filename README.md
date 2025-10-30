@@ -1,2 +1,2 @@
-# readme-only
-nearly empty project (only a readme)
+# exploring ci/cd
+A team repo to share and collaborate
