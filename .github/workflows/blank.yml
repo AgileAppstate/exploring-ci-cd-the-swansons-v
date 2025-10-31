@@ -34,3 +34,15 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v5.0.0
+        with:
+          # Java distribution. See the list of supported distributions in README file
+          distribution: oracle
+
+      - name: Compile HelloWorld.java
+        run: javac HelloWorld.java
+
+      - name: Execute HelloWorld
+        run: java HelloWorld
