@@ -46,4 +46,6 @@ jobs:
         run: javac src/HelloWorld.java
 
       - name: Execute HelloWorld
-        run: java HelloWorld
+        run: |
+          cd src
+          java HelloWorld
