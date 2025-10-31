@@ -43,7 +43,7 @@ jobs:
           distribution: oracle
 
       - name: Compile HelloWorld.java
-        run: javac HelloWorld.java
+        run: javac src/HelloWorld.java
 
       - name: Execute HelloWorld
         run: java HelloWorld
