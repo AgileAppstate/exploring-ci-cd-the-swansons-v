@@ -2,7 +2,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.time.LocalTime;
+import java.time.LocalDate;
 
 public class HelloWorldTest {
 
@@ -21,8 +21,8 @@ public class HelloWorldTest {
 
         // Compare output
         String output = outContent.toString().trim();
-        LocalTime obj = LocalTime.now();
-        assertEquals("Hello World!" + obj, output);
+        LocalDate obj = LocalDate.now();
+        assertEquals("Hello World!\n" + obj, output);
     }
 }
 
