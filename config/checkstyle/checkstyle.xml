@@ -33,12 +33,7 @@
         <module name="UnusedImports"/>
         <module name="RedundantImport"/>
 
-        <!-- Prevent very long lines -->
-        <module name="LineLength">
-            <property name="max" value="120"/>
-        </module>
-
-        <!-- Enforce a newline at end of file -->
+       	<!-- Enforce a newline at end of file -->
         <module name="NewlineAtEndOfFile"/>
 
         <!-- Optional: limit method length -->
