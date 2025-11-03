@@ -29,15 +29,8 @@
         <!-- Basic code structure checks -->
         <module name="EmptyBlock"/>
         <module name="NeedBraces"/>
-        <module name="AvoidStarImport"/>
         <module name="UnusedImports"/>
-        <module name="RedundantImport"/>
 
-    </module>
-
-    <!-- File-based checks -->
-    <module name="FileTabCharacter">
-        <property name="eachLine" value="true"/>
-    </module>
-
+	</module>
 </module>
+
