@@ -49,3 +49,21 @@ jobs:
         run: |
           cd src
           java HelloWorld
+
+      - name: Create bin and lib directories
+        run: |
+          mkdir -p bin lib
+        
+      - name: Download JUnit Platform Console
+        run: |
+          curl -L -o lib/junit-platform-console-standalone.jar \
+            https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.10.1/junit-platform-console-standalone-1.10.1.jar
+
+      - name: Compile Java source and test files
+        run: |
+          javac -cp ".:lib/junit-platform-console-standalone.jar" -d bin src/*.java
+
+      - name: Run JUnit Tests
+        run: |
+          java -jar lib/junit-platform-console-standalone.jar -cp bin --scan-classpath
+
