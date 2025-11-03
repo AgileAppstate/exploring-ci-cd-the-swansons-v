@@ -1,0 +1,23 @@
+name: Count Lines in src/
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  count-lines:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Count lines in each file under src/
+        run: |
+          echo "Counting lines in each file under src/..."
+          echo "------------------------------------------"
+          find src -type f | while read file; do
+            lines=$(wc -l < "$file")
+            printf "%6d  %s\n" "$lines" "$file"
+          done
+          echo "------------------------------------------"
+          echo "Done."
